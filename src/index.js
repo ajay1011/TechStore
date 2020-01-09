@@ -8,12 +8,12 @@ import { UserProvider } from "./context/user";
 
 ReactDOM.render(
   // sequence of providers doesnt matter as long as they are wrapping main App component
-  <ProductProvider>
-    <CartProvider>
-      <UserProvider>
+  <UserProvider>
+    <ProductProvider>
+      <CartProvider>
         <App />
-      </UserProvider>
-    </CartProvider>
-  </ProductProvider>,
+      </CartProvider>
+    </ProductProvider>
+  </UserProvider>,
   document.getElementById("root")
 );
